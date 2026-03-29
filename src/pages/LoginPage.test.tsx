@@ -81,7 +81,7 @@ describe('LoginPage', () => {
             await user.type(screen.getByLabelText('密碼'), 'onlyletters');
             await user.click(screen.getByRole('button', { name: '登入' }));
 
-            expect(screen.getByText('密碼必須fffff包含英文字母和數字')).toBeInTheDocument();
+            expect(screen.getByText('密碼必須包含英文字母和數字')).toBeInTheDocument();
             expect(mockLogin).not.toHaveBeenCalled();
         });
     });
